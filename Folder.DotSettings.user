@@ -1,0 +1,19 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=5C61DDB0_002DDCBB_002D21BF_002DFFB7_002D2115599CA915/@EntryIndexedValue">5C61DDB0-DCBB-21BF-FFB7-2115599CA915</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=NUnit3x/@EntryIndexedValue">db4927dd-2e12-48a7-9a84-2b7e3e31b9c8</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=514a6627_002D4612_002D4466_002Daa02_002D25abcb941d3b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from ContactsUserServiceTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;5C61DDB0-DCBB-21BF-FFB7-2115599CA915/d:Services/f:ContactsUserServiceTest.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7e92a610_002Da88c_002D4e56_002D96e7_002De62bef218bb6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestGetUser" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::5C61DDB0-DCBB-21BF-FFB7-2115599CA915::net8.0::Contacts.Services.ContactsUserServiceTest.TestGetUser&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a84b980c_002D84a1_002D46e9_002D8579_002D356776bccbca/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from ContactsUserServiceTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;ProjectFile&gt;5C61DDB0-DCBB-21BF-FFB7-2115599CA915/d:Services/f:ContactsUserServiceTest.cs&lt;/ProjectFile&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::5C61DDB0-DCBB-21BF-FFB7-2115599CA915::net8.0::Contacts.Test.ContactTests.TestGetUsers&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

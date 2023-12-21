@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Contacts.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:ContactsViewModel"
+             x:Class="Contacts.Views.ContactsListView">
+    <StackPanel Grid.Column="0" MinWidth="200" Grid.Row="0" Spacing="5" Margin="5 32 5 5"
+                HorizontalAlignment="Left"
+                Name="StackPanel1"
+                VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" Spacing="5" Height="32" HorizontalAlignment="Center">
+            <Border CornerRadius="5">
+                <TextBox Watermark="search" Width="100" />
+            </Border>
+            <Button Content="+" Click="AddUserHandler"></Button>
+        </StackPanel>
+
+        <StackPanel Spacing="5">
+            
+            <ItemsControl ItemsSource="{Binding  Users}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="5">
+                            <TextBox Text="{Binding Name}"></TextBox>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
