@@ -3,7 +3,7 @@
 osArr=(osx-arm64 osx-x64)
 
 
-OUT_PUT_DIR="./bin/Release/output"
+OUT_PUT_DIR="./bin/Release/Output"
 
 
 for os in ${osArr[*]}
@@ -42,5 +42,7 @@ do
     cp "$INFO_PLIST" "$APP_NAME/Contents/Info.plist"
     cp "$ICON_FILE" "$APP_NAME/Contents/Resources/icon.icns"
     cp -a "$PUBLISH_OUTPUT_DIRECTORY" "$APP_NAME/Contents/MacOS"
+    
+    echo "${os} done"
 done
 
