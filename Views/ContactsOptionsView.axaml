@@ -38,8 +38,8 @@
 
             <TextBlock
                 VerticalAlignment="Center"
-                Grid.Row="2" Grid.Column="0"
-                Text="地址: "
+                Grid.Row="2" Grid.Column="0" xml:space="preserve"
+                Text="地址"
                 TextAlignment="Right">
             </TextBlock>
             <TextBox
@@ -52,6 +52,16 @@
         <!--     <Button Grid.Column="0" Margin="10" Background="DarkGray" HorizontalAlignment="Right">取消</Button> -->
         <!--     <Button Grid.Column="1" Margin="10" Background="DeepSkyBlue">保存</Button> -->
         <!-- </Grid> -->
+        <Border>
+            
+        </Border>
+        <TextBlock xml:space="preserve">
+            地址: 
+            2222
+            2
+            3
+
+        </TextBlock>
         <StackPanel
             Spacing=""
             Height="120"

@@ -1,0 +1,149 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Contacts.Views.DemoVIew">
+
+
+    <Panel Name="DemoPage">
+        <TabControl Margin="5">
+            <TabItem Header="表单" Name="DemoPageForm">
+                <ScrollViewer>
+                    <StackPanel Background="Azure" HorizontalAlignment="Left">
+                        <StackPanel.Styles>
+                            <Style Selector="StackPanel > TextBlock">
+                                <Setter Property="Foreground" Value="Red"></Setter>
+                            </Style>
+                            <Style Selector="StackPanel > TextBox,StackPanel > MaskedTextBox">
+                                <Setter Property="Width" Value="150"></Setter>
+                            </Style>
+                            <Style Selector="StackPanel">
+                                <Setter Property="Spacing" Value="10"></Setter>
+                            </Style>
+
+                        </StackPanel.Styles>
+                        <!-- <TextBlock FontSize="20" Foreground="Red" FontWeight="Bold" FontStyle="Italic" Text="账号注册"></TextBlock> -->
+                        <!--             <Border -->
+                        <!--                 BoxShadow="" -->
+                        <!--                 Background="Aqua" -->
+                        <!--                 BorderThickness="5" -->
+                        <!--                 BorderBrush="Brown" -->
+                        <!--                 CornerRadius="10"> -->
+                        <!--                 <TextBlock xml:space="preserve"> -->
+                        <!--     hello 多行文本 -->
+                        <!--     hello 多行文本 -->
+                        <!--     hello 多行文本 -->
+                        <!-- </TextBlock> -->
+                        <!--             </Border> -->
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center" Text="账号"></TextBlock>
+                            <TextBox Watermark="请输入账号" Name="AccountName"></TextBox>
+                        </StackPanel>
+                        <TextBlock Text="{Binding #AccountName.Text}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center" Text="密码"></TextBlock>
+                            <TextBox PasswordChar="*" Watermark="长度6-12 字符"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center" Text="地址"></TextBlock>
+                            <TextBox Height="60" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="手机"></TextBlock>
+                            <MaskedTextBox Mask="(+86) 000 0000 0000"></MaskedTextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="协议" VerticalAlignment="Center"></TextBlock>
+                            <Expander Header="详情">
+                                <TextBlock Height="60" xml:space="preserve">
+                                        协议详情
+                                        协议详情
+                                        协议详情
+                                        协议详情
+                                        协议详情
+                                        协议详情
+                                </TextBlock>
+
+                            </Expander>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="按钮选择"></TextBlock>
+                                <ToggleButton>ToggleButton</ToggleButton>
+                                <ToggleSwitch></ToggleSwitch>
+                            </StackPanel>
+
+                            <ToggleSplitButton Content="ToggleSplitButton">
+                                <ToggleSplitButton.Flyout>
+                                    <MenuFlyout>
+                                        <MenuItem Header="Menu 1"></MenuItem>
+                                        <MenuItem Header="Menu 2"></MenuItem>
+                                        <MenuItem Header="Menu 3"></MenuItem>
+                                    </MenuFlyout>
+                                </ToggleSplitButton.Flyout>
+                            </ToggleSplitButton>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="多选框" VerticalAlignment="Center"></TextBlock>
+                                <CheckBox>选项 A</CheckBox>
+                                <CheckBox IsChecked="True">默认选中</CheckBox>
+                                <CheckBox IsThreeState="True" IsChecked="{x:Null}">三种状态</CheckBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="下拉列表" VerticalAlignment="Center"></TextBlock>
+                                <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
+                                    <ComboBoxItem>Text Item 1</ComboBoxItem>
+                                    <ComboBoxItem>Text Item 2</ComboBoxItem>
+                                    <ComboBoxItem>Text Item 3</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label>标签</Label>
+                            <Button ClickMode="Release" Content="取消">
+                                <Button.Flyout>
+                                    <Flyout Placement="Right">This is the button flyout.</Flyout>
+                                </Button.Flyout>
+                            </Button>
+                            <Button ClickMode="Press">提交</Button>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </TabItem>
+            <TabItem Header="Tab 2">
+                <TextBlock Margin="5">This is tab 2 content</TextBlock>
+            </TabItem>
+            <TabItem Header="日期">
+                <ScrollViewer>
+
+                    <StackPanel Orientation="Vertical">
+
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>日期选择</TextBlock>
+                            <DatePicker Name="DatePicker"></DatePicker>
+                            <DatePicker YearVisible="False"></DatePicker>
+                            <DatePicker YearVisible="False" MonthVisible="False"></DatePicker>
+                        </StackPanel>
+                        <TextBlock Text="{Binding #DatePicker.SelectedDate}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>时间选择</TextBlock>
+                            <TimePicker MinuteIncrement="30"></TimePicker>
+                        </StackPanel>
+                        <StackPanel>
+
+                            <TextBlock>Calendar</TextBlock>
+                            <!-- <Calendar x:Name="Calendar1" SelectionMode="MultipleRange"></Calendar> -->
+                            <Calendar x:Name="Calendar2" SelectionMode="SingleDate"></Calendar>
+                        </StackPanel>
+                    </StackPanel>
+
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+
+
+    </Panel>
+</UserControl>

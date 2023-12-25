@@ -26,5 +26,10 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="NUnit" Version="4.0.1" />
   </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Assets\icons.iconset\" />
+  </ItemGroup>
   
 </Project>

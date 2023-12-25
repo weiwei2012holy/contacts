@@ -1,0 +1,17 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <!-- <Style Selector="#DemoPageForm  StackPanel > TextBlock"> -->
+    <!--     <Setter Property="Foreground" Value="Black"></Setter> -->
+    <!--     <Setter Property="VerticalAlignment" Value="Center"></Setter> -->
+    <!-- </Style> -->
+    <!-- <Style Selector="#DemoPageForm  StackPanel "> -->
+    <!--     <Setter Property="Spacing" Value="10"></Setter> -->
+    <!-- </Style> -->
+</Styles>

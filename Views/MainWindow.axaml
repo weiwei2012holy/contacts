@@ -12,9 +12,14 @@
         ExtendClientAreaToDecorationsHint="True"
         Icon="/Assets/avalonia-logo.ico"
         Title="Contacts">
+    <Window.Styles>
+        
+    </Window.Styles>
+    
 
 
     <Panel>
+ 
         <!-- <ExperimentalAcrylicBorder IsHitTestVisible="False"> -->
         <!--     <ExperimentalAcrylicBorder.Material> -->
         <!--         <ExperimentalAcrylicMaterial -->
@@ -25,12 +30,23 @@
         <!--     </ExperimentalAcrylicBorder.Material> -->
         <!-- </ExperimentalAcrylicBorder> -->
         <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open..."/>
+                    <Separator/>
+                    <MenuItem Header="_Exit"/>
+                </MenuItem>
+                <MenuItem Header="_Edit">
+                    <MenuItem Header="Copy"/>
+                    <MenuItem Header="Paste"/>
+                </MenuItem>
+            </Menu>
             
-        <Border MinWidth="100" DockPanel.Dock="Left">
+            <Border MinWidth="100" DockPanel.Dock="Left">
             <views:ContactsListView DataContext="{Binding Users}"></views:ContactsListView>
         </Border>
         <Border DockPanel.Dock="Right">
-            <views:ContactsOptionsView></views:ContactsOptionsView>
+            <views:DemoVIew></views:DemoVIew>
         </Border>
         </DockPanel>
 

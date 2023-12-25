@@ -4,10 +4,13 @@
     <option name="projectPerEditor">
       <map>
         <entry key="App.axaml" value="Contacts.csproj" />
+        <entry key="AppStyles.axaml" value="Contacts.csproj" />
+        <entry key="ContactsAddView.axaml" value="Contacts.csproj" />
         <entry key="ContactsListView.axaml" value="Contacts.csproj" />
         <entry key="Views/ContactsAddView.axaml" value="Contacts.csproj" />
         <entry key="Views/ContactsListView.axaml" value="Contacts.csproj" />
         <entry key="Views/ContactsOptionsView.axaml" value="Contacts.csproj" />
+        <entry key="Views/DemoVIew.axaml" value="Contacts.csproj" />
         <entry key="Views/MainWindow.axaml" value="Contacts.csproj" />
       </map>
     </option>
