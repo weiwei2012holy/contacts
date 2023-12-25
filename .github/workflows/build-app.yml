@@ -37,13 +37,13 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-artifact@v3.0.0
         with:
-          path: bin/Release/Output
+          path: bin/Release/Output/
           
           # 发不到release
-#      - name: release
-#        uses: softprops/action-gh-release@v1
-##        if: startsWith(github.ref, 'refs/tags/')
-#        with:
-#          files: "bin/Release/Output/**" # 把这些文件添加到relase- Assets 里面，一般就是把打包后的安装包放进去
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: "bin/Release/Output/**" # 把这些文件添加到relase- Assets 里面，一般就是把打包后的安装包放进去
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
