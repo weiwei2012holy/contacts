@@ -99,3 +99,4 @@
 
 ### 文档
 - 使用 .NET CLI 发布 .NET 应用 https://learn.microsoft.com/zh-cn/dotnet/core/deploying/deploy-with-cli 
+- publish 手册：https://learn.microsoft.com/zh-cn/dotnet/core/tools/dotnet-publish
