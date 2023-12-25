@@ -5,7 +5,7 @@
         <key>CFBundleIconFile</key>
         <string>icon.icns</string>
         <key>CFBundleIdentifier</key>
-        <string>com.identifier</string>
+        <string>com.contacts.macos</string>
         <key>CFBundleName</key>
         <string>Contacts</string>
         <key>CFBundleVersion</key>
@@ -13,7 +13,7 @@
         <key>LSMinimumSystemVersion</key>
         <string>10.12</string>
         <key>CFBundleExecutable</key>
-        <string>Contacts.Avalonia</string>
+        <string>Contacts</string>
         <key>CFBundleInfoDictionaryVersion</key>
         <string>6.0</string>
         <key>CFBundlePackageType</key>

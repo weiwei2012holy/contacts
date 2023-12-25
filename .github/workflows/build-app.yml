@@ -1,0 +1,49 @@
+name: Build App
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [ Release ]
+
+    runs-on: ubuntu-latest  # For a list of available runner types, refer to
+    # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      # Install the .NET Core workload
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build Mac
+        run: ./build-mac.sh
+        
+        # 上传文件供给后续脚本使用
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3.0.0
+        with:
+          path: bin/Release/Output
+          
+          # 发不到release
+      - name: release
+        uses: softprops/action-gh-release@v1
+#        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: "bin/Release/Output/**" # 把这些文件添加到relase- Assets 里面，一般就是把打包后的安装包放进去
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
